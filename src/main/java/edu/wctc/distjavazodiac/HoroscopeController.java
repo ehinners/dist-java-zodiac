@@ -13,19 +13,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class HoroscopeController {
-
-    private MonthListService monthListService;
-    private HoroscopeService horoscopeService;
-
     @Autowired
-    public HoroscopeController(MonthListService mls, HoroscopeService hs) {
-        this.monthListService = mls;
-        this.horoscopeService = hs;
-    }
+    private MonthListService monthListService;
+    @Autowired
+    private HoroscopeService horoscopeService;
 
     @PostMapping("/get-horoscope")
     public String processForm(@ModelAttribute Birthday bday,
                               Model model) {
+//        Object o = model.getAttribute("birthday");
+//        Birthday bday = (Birthday) o;
         model.addAttribute("pageTitle", "Know Your Fate");
         model.addAttribute("hs", horoscopeService.getHoroscope(bday));
 
