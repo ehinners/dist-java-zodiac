@@ -5,6 +5,7 @@ import edu.wctc.distjavazodiac.entity.Birthday;
 import edu.wctc.distjavazodiac.entity.Fortune;
 import edu.wctc.distjavazodiac.entity.Horoscope;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -16,8 +17,10 @@ import java.util.List;
 /*
 Random horoscopes from https://cafeastrology.com/dailyhoroscopesall-tomorrow.html
  */
+
 @Service
-public class RandomHoroscopeService implements HoroscopeService {
+public class RandomHoroscopeService implements HoroscopeService
+{
     private List<Fortune> allFortunes;
     private ZodiacService zodiacService;
 

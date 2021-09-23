@@ -64,11 +64,14 @@ public class SimpleZodiacService implements ZodiacService {
     }
 
     @Override
-    public String getWesternZodiacSign(Birthday birthday) {
+    public String getWesternZodiacSign(Birthday birthday)
+    {
         // Year doesn't affect Western zodiac, only month and day
         LocalDate date = LocalDate.of(2000, birthday.getMonth(), birthday.getDay());
-        for (int i = 0; i < westernSignStartDates.length; i++) {
-            if (date.isBefore(westernSignStartDates[i])) {
+        for (int i = 0; i < westernSignStartDates.length; i++)
+        {
+            if (date.isBefore(westernSignStartDates[i]))
+            {
                 return signs[i];
             }
         }

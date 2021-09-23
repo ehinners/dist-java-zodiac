@@ -2,6 +2,7 @@ package edu.wctc.distjavazodiac.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import edu.wctc.distjavazodiac.entity.Month;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
