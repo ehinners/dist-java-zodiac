@@ -16,6 +16,7 @@ import java.util.Arrays;
 import java.util.List;
 
 @Service
+@Primary
 public class SQLMonthListService  implements MonthListService
 {
 

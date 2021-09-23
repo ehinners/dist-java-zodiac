@@ -17,6 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 @Service
+@Primary
 public class SQLRandomHoroscopeService implements HoroscopeService
 {
     private FortuneRepository fortuneRepository;
